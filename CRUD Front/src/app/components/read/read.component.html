@@ -1,0 +1,76 @@
+<div class="card">
+    <div class="card-body">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date</th>
+                <th scope="col">YourName</th>
+                <th scope="col">BusinessName</th>
+                <th scope="col">Profession</th>
+                <th scope="col">Location</th>
+                <th scope="col">PreviousTypeOfJobs</th>
+                <th scope="col">FamilyInformation</th>
+                <th scope="col">Spouse</th>
+                <th scope="col">Children</th>
+                <th scope="col">Animals</th>
+                <th scope="col">Hobbies</th>
+                <th scope="col">ActivityOfInterest</th>
+                <th scope="col">CityOfResidence</th>
+                <th scope="col">BurningDesire</th>
+                <th scope="col">SomethingNoOneKnowsAboutMe</th>
+                <th scope="col">KeyToSuccess</th>
+                <th scope="col">BusinessGoals</th>
+                <th scope="col">BusinessAccomplishments</th>
+                <th scope="col">BusinessInterests</th>
+                <th scope="col">BusinessNetworks</th>
+                <th scope="col">BusinessSkills</th>
+                <th scope="col">PersonalGoals</th>
+                <th scope="col">PersonalAccomplishments</th>
+                <th scope="col">PersonalInterests</th>
+                <th scope="col">PersonalNetworks</th>
+                <th scope="col">PersonalSkills</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let c of InfoReport; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{c.Date}}</td>
+                <td>{{c.YourName}}</td>
+                <td>{{c.BusinessName}}</td>
+                <td>{{c.Profession}}</td>
+                <td>{{c.Location}}</td>
+                <td>{{c.PreviousTypeOfJobs}}</td>
+                <td>{{c.FamilyInformation}}</td>
+                <td>{{c.Spouse}}</td>
+                <td>{{c.Children}}</td>
+                <td>{{c.Animals}}</td>
+                <td>{{c.Hobbies}}</td>
+                <td>{{c.ActivityOfInterest}}</td>
+                <td>{{c.CityOfResidence}}</td>
+                <td>{{c.BurningDesire}}</td>
+                <td>{{c.SomethingNoOneKnowsAboutMe}}</td>
+                <td>{{c.KeyToSuccess}}</td>
+                <td>{{c.BusinessGoals}}</td>
+                <td>{{c.BusinessAccomplishments}}</td>
+                <td>{{c.BusinessInterests}}</td>
+                <td>{{c.BusinessNetworks}}</td>
+                <td>{{c.BusinessSkills}}</td>
+                <td>{{c.PersonalGoals}}</td>
+                <td>{{c.PersonalAccomplishments}}</td>
+                <td>{{c.PersonalInterests}}</td>
+                <td>{{c.PersonalNetworks}}</td>
+                <td>{{c.PersonalSkills}}</td>
+                <td>
+                <button class="btn btn-primary" [routerLink]="['update' , c.ID ]" type="button">Update</button>
+                </td>
+                <td>
+                <button class="btn btn-primary" type="button" (click)="deleteInfo(c.ID)">Delete</button>
+                </td>
+            </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.card{
+    /* align-items: center; */
+    margin: 57px 116px;
+}
+
+table {
+    display: block;
+    overflow-x: auto;
+    /* overflow-y: auto; */
+    white-space: nowrap;
+}
+
+table th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
